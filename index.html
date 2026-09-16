@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="EnvíoFácil - Tienda online de productos para el hogar, tecnología y uso diario.">
+
+    <meta name="robots" content="index, follow">
+
+    <title>EnvíoFácil | Tienda Online</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e8e8e8;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1150px;
+            margin: auto;
+            padding: 16px 20px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #111827;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: #16a34a;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #374151;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #16a34a;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background: linear-gradient(135deg, #111827, #1f2937);
+            color: white;
+            padding: 90px 20px;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #4ade80;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 18px;
+            color: #d1d5db;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button-green {
+            background: #16a34a;
+            color: white;
+        }
+
+        .button-green:hover {
+            background: #15803d;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .section-subtitle {
+            color: #6b7280;
+            margin-bottom: 35px;
+        }
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .card p {
+            color: #6b7280;
+        }
+
+        /* =========================
+           LEGAL
+        ========================= */
+
+        .legal-section {
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .legal-content {
+            max-width: 1000px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .legal-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+
+        .legal-content h3 {
+            font-size: 21px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        .legal-content p {
+            margin-bottom: 14px;
+            color: #4b5563;
+        }
+
+        .legal-content ul {
+            margin: 15px 0 20px 25px;
+            color: #4b5563;
+        }
+
+        .legal-content li {
+            margin-bottom: 8px;
+        }
+
+        .important {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 18px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #111827;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            color: #d1d5db;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b1120;
+            color: #9ca3af;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-links {
+            margin: 15px 0;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .container,
+            .legal-content {
+                padding: 50px 20px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <div class="navbar">
+
+        <a href="#inicio" class="logo">
+            Envío<span>Fácil</span>
+        </a>
+
+        <nav>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#envios">Envíos</a>
+            <a href="#privacidad">Privacidad</a>
+            <a href="#terminos">Términos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     INICIO
+========================================================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <h1>
+            Compra fácil.<br>
+            Recibe fácil.
+            <span>EnvíoFácil.</span>
+        </h1>
+
+        <p>
+            Somos una tienda online dedicada a ofrecer productos
+            prácticos para el hogar, tecnología, herramientas y
+            artículos de uso diario.
+        </p>
+
+        <a href="#nosotros" class="button button-green">
+            Conoce nuestro negocio
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NOSOTROS
+========================================================= -->
+
+<section id="nosotros">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Sobre EnvíoFácil
+        </h2>
+
+        <p class="section-subtitle">
+            Una tienda online enfocada en facilitar el proceso
+            de compra y entrega de productos.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🛍️ Productos</h3>
+
+                <p>
+                    Comercializamos productos seleccionados para
+                    el hogar, tecnología, herramientas y diferentes
+                    necesidades de nuestros clientes.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🚚 Envíos</h3>
+
+                <p>
+                    Realizamos envíos dentro del territorio colombiano
+                    de acuerdo con la cobertura disponible de nuestros
+                    operadores logísticos.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🤝 Atención</h3>
+
+                <p>
+                    Nuestro objetivo es brindar una experiencia de
+                    compra clara, sencilla y transparente.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ENVÍOS
+========================================================= -->
+
+<section id="envios">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Envíos y pagos
+        </h2>
+
+        <p class="section-subtitle">
+            Información general sobre nuestro proceso de compra.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🚚 Envío</h3>
+
+                <p>
+                    Ofrecemos envío gratuito en los productos que
+                    indiquen esta condición comercial.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>💰 Pago contra entrega</h3>
+
+                <p>
+                    En los productos habilitados para esta modalidad,
+                    el cliente puede pagar al momento de recibir
+                    su pedido.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>⏱️ Tiempo de entrega</h3>
+
+                <p>
+                    El tiempo estimado de entrega normalmente se
+                    encuentra entre 3 y 5 días hábiles, dependiendo
+                    del destino y del operador logístico.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PRIVACIDAD
+========================================================= -->
+
+<section id="privacidad" class="legal-section">
+
+    <div class="legal-content">
+
+        <h2>
+            Política de Privacidad
+        </h2>
+
+        <p>
+            <strong>Última actualización:</strong>
+            16 de septiembre de 2026
+        </p>
+
+        <div class="important">
+
+            <strong>Responsable del tratamiento:</strong>
+
+            <br><br>
+
+            Razón social / nombre:
+            <strong>[REEMPLAZAR CON NOMBRE REAL]</strong>
+
+            <br>
+
+            NIT / identificación:
+            <strong>[REEMPLAZAR]</strong>
+
+            <br>
+
+            Correo electrónico:
+            <strong>[REEMPLAZAR CON CORREO REAL]</strong>
+
+            <br>
+
+            Ciudad:
+            <strong>[REEMPLAZAR]</strong>
+
+        </div>
+
+
+        <h3>1. Información que recopilamos</h3>
+
+        <p>
+            EnvíoFácil puede recopilar información proporcionada
+            directamente por los usuarios cuando realizan una compra,
+            solicitan información sobre un producto o se comunican
+            con nuestro servicio de atención.
+        </p>
+
+        <p>La información puede incluir:</p>
+
+        <ul>
+
+            <li>Nombre completo.</li>
+
+            <li>Número de teléfono.</li>
+
+            <li>Dirección de entrega.</li>
+
+            <li>Ciudad y departamento.</li>
+
+            <li>Información relacionada con el pedido.</li>
+
+            <li>Información proporcionada voluntariamente por el cliente.</li>
+
+        </ul>
+
+
+        <h3>2. Finalidad del tratamiento</h3>
+
+        <p>
+            Los datos personales pueden ser utilizados para:
+        </p>
+
+        <ul>
+
+            <li>Procesar y gestionar pedidos.</li>
+
+            <li>Coordinar la entrega de productos.</li>
+
+            <li>Contactar al cliente respecto de su pedido.</li>
+
+            <li>Responder preguntas y solicitudes.</li>
+
+            <li>Gestionar garantías, cambios o devoluciones.</li>
+
+            <li>Prevenir operaciones fraudulentas.</li>
+
+            <li>Cumplir obligaciones legales.</li>
+
+            <li>Mejorar nuestros productos y servicios.</li>
+
+        </ul>
+
+
+        <h3>3. Comunicaciones mediante WhatsApp</h3>
+
+        <p>
+            Cuando el cliente proporciona voluntariamente su número
+            telefónico y acepta ser contactado, EnvíoFácil podrá utilizar
+            servicios de mensajería, incluyendo WhatsApp Business,
+            para gestionar consultas, pedidos, confirmaciones,
+            actualizaciones relacionadas con entregas y atención
+            al cliente.
+        </p>
+
+        <p>
+            La información utilizada para estas comunicaciones se
+            limita a la finalidad correspondiente y se administra
+            conforme a las políticas aplicables y a la legislación
+            colombiana sobre protección de datos personales.
+        </p>
+
+
+        <h3>4. Compartición de información</h3>
+
+        <p>
+            Podemos compartir determinados datos personales cuando sea
+            necesario para prestar el servicio solicitado.
+        </p>
+
+        <p>
+            Por ejemplo, los datos necesarios para entregar un pedido
+            pueden ser suministrados al operador logístico encargado
+            del transporte.
+        </p>
+
+        <p>
+            No comercializamos los datos personales de nuestros clientes.
+        </p>
+
+
+        <h3>5. Conservación de la información</h3>
+
+        <p>
+            Conservaremos la información durante el tiempo necesario
+            para cumplir las finalidades descritas en esta política,
+            atender obligaciones legales, resolver reclamaciones y
+            mantener los registros comerciales correspondientes.
+        </p>
+
+
+        <h3>6. Derechos del titular</h3>
+
+        <p>
+            El titular de los datos personales podrá solicitar,
+            de acuerdo con la legislación aplicable:
+        </p>
+
+        <ul>
+
+            <li>Conocer los datos personales tratados.</li>
+
+            <li>Solicitar la actualización o rectificación.</li>
+
+            <li>Solicitar información sobre el tratamiento.</li>
+
+            <li>Presentar consultas o reclamos.</li>
+
+            <li>Solicitar la supresión cuando sea legalmente procedente.</li>
+
+            <li>Revocar la autorización cuando corresponda.</li>
+
+        </ul>
+
+
+        <h3>7. Consultas y reclamos</h3>
+
+        <p>
+            Para ejercer sus derechos o realizar consultas relacionadas
+            con el tratamiento de datos personales, puede comunicarse
+            mediante:
+        </p>
+
+        <p>
+
+            <strong>Correo:</strong>
+            [REEMPLAZAR CON CORREO REAL]
+
+            <br>
+
+            <strong>Responsable:</strong>
+            [REEMPLAZAR]
+
+        </p>
+
+
+        <h3>8. Seguridad</h3>
+
+        <p>
+            Adoptamos medidas razonables de seguridad destinadas a
+            proteger los datos personales frente a acceso no autorizado,
+            pérdida, alteración o divulgación indebida.
+        </p>
+
+
+        <h3>9. Actualizaciones</h3>
+
+        <p>
+            Esta política podrá ser actualizada cuando resulte necesario
+            debido a cambios en nuestros procesos, servicios,
+            tecnologías utilizadas o requisitos legales.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TRATAMIENTO DE DATOS
+========================================================= -->
+
+<section id="datos">
+
+    <div class="legal-content">
+
+        <h2>
+            Tratamiento de Datos Personales
+        </h2>
+
+        <p>
+            EnvíoFácil reconoce la importancia de la protección de
+            los datos personales de sus clientes y usuarios.
+        </p>
+
+        <p>
+            La información personal será tratada únicamente para
+            las finalidades informadas al titular o para aquellas
+            permitidas por la legislación aplicable.
+        </p>
+
+        <h3>Autorización</h3>
+
+        <p>
+            Cuando corresponda, solicitaremos la autorización del
+            titular para el tratamiento de sus datos personales.
+        </p>
+
+        <h3>Canales de atención</h3>
+
+        <p>
+            Las solicitudes relacionadas con datos personales podrán
+            realizarse a través del correo:
+        </p>
+
+        <p>
+            <strong>[REEMPLAZAR CON CORREO REAL]</strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TERMINOS
+========================================================= -->
+
+<section id="terminos" class="legal-section">
+
+    <div class="legal-content">
+
+        <h2>
+            Términos y Condiciones
+        </h2>
+
+        <p>
+            Estos términos establecen las condiciones generales
+            aplicables al uso de los servicios y canales de
+            EnvíoFácil.
+        </p>
+
+
+        <h3>1. Productos</h3>
+
+        <p>
+            Las características, fotografías, precios y disponibilidad
+            de los productos podrán cambiar sin previo aviso.
+        </p>
+
+
+        <h3>2. Precios</h3>
+
+        <p>
+            El precio aplicable será el informado al cliente al momento
+            de confirmar la compra, sujeto a las condiciones de la
+            promoción correspondiente.
+        </p>
+
+
+        <h3>3. Pedidos</h3>
+
+        <p>
+            Un pedido se considera solicitado cuando el cliente
+            proporciona la información necesaria para procesarlo.
+        </p>
+
+        <p>
+            EnvíoFácil podrá comunicarse con el cliente para confirmar
+            los datos antes de realizar el despacho.
+        </p>
+
+
+        <h3>4. Entregas</h3>
+
+        <p>
+            Los tiempos de entrega son estimados y pueden variar
+            debido a condiciones logísticas, climáticas, operativas
+            o situaciones fuera del control de EnvíoFácil.
+        </p>
+
+
+        <h3>5. Pago contra entrega</h3>
+
+        <p>
+            Cuando esta modalidad esté disponible, el cliente realizará
+            el pago al recibir el producto, conforme a las condiciones
+            informadas durante el proceso de compra.
+        </p>
+
+
+        <h3>6. Garantía</h3>
+
+        <p>
+            Los productos cuentan con la garantía que corresponda
+            según sus características y las condiciones informadas
+            al momento de la compra.
+        </p>
+
+
+        <h3>7. Cambios y devoluciones</h3>
+
+        <p>
+            Las solicitudes de cambios, devoluciones o garantías serán
+            gestionadas conforme a la legislación colombiana aplicable
+            y a las condiciones particulares del producto adquirido.
+        </p>
+
+
+        <h3>8. Uso del sitio</h3>
+
+        <p>
+            El usuario se compromete a proporcionar información veraz
+            y a utilizar nuestros canales de comunicación de manera
+            lícita y respetuosa.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     COOKIES
+========================================================= -->
+
+<section id="cookies">
+
+    <div class="legal-content">
+
+        <h2>
+            Política de Cookies
+        </h2>
+
+        <p>
+            Este sitio web puede utilizar tecnologías similares a
+            cookies para mejorar su funcionamiento y analizar el
+            uso del sitio.
+        </p>
+
+        <h3>¿Qué son las cookies?</h3>
+
+        <p>
+            Son pequeños archivos o identificadores que pueden
+            almacenarse en el dispositivo del usuario cuando visita
+            determinadas páginas web.
+        </p>
+
+        <h3>Uso</h3>
+
+        <p>
+            Las cookies pueden utilizarse para recordar preferencias,
+            facilitar determinadas funciones y obtener información
+            estadística sobre el funcionamiento del sitio.
+        </p>
+
+        <h3>Control</h3>
+
+        <p>
+            El usuario puede administrar o eliminar cookies desde
+            las opciones de configuración de su navegador.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GARANTIAS
+========================================================= -->
+
+<section id="garantias" class="legal-section">
+
+    <div class="legal-content">
+
+        <h2>
+            Garantías, Cambios y Devoluciones
+        </h2>
+
+        <p>
+            Las solicitudes relacionadas con garantía, cambios o
+            devoluciones deberán realizarse utilizando nuestros
+            canales oficiales de atención.
+        </p>
+
+        <h3>Garantía</h3>
+
+        <p>
+            Los productos estarán sujetos a las condiciones de
+            garantía informadas al momento de la compra y a las
+            disposiciones legales aplicables.
+        </p>
+
+        <h3>Solicitud</h3>
+
+        <p>
+            Para solicitar atención relacionada con un producto,
+            el cliente deberá proporcionar la información necesaria
+            para identificar la compra.
+        </p>
+
+        <h3>Evaluación</h3>
+
+        <p>
+            Cada caso será evaluado de acuerdo con la naturaleza
+            de la solicitud, las condiciones del producto y la
+            normativa aplicable.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACTO
+========================================================= -->
+
+<section id="contacto" class="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Contacto
+        </h2>
+
+        <p>
+            ¿Tienes alguna pregunta sobre nuestros productos,
+            pedidos o políticas?
+        </p>
+
+        <br>
+
+        <p>
+            <strong>EnvíoFácil</strong>
+        </p>
+
+        <p>
+            📧 [CORREO ELECTRÓNICO]
+        </p>
+
+        <p>
+            📱 [NÚMERO DE WHATSAPP]
+        </p>
+
+        <p>
+            📍 [CIUDAD, COLOMBIA]
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <strong>EnvíoFácil</strong>
+
+    <div class="footer-links">
+
+        <a href="#privacidad">
+            Política de privacidad
+        </a>
+
+        <a href="#datos">
+            Datos personales
+        </a>
+
+        <a href="#terminos">
+            Términos
+        </a>
+
+        <a href="#cookies">
+            Cookies
+        </a>
+
+        <a href="#garantias">
+            Garantías
+        </a>
+
+    </div>
+
+    <p>
+        © 2026 EnvíoFácil. Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
